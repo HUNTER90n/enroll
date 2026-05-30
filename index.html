@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberLearn Academy - Master future tech skills with elite programs in Ethical Hacking, Full Stack Web Development, and Advanced UI Motion Design.">
+  <meta name="author" content="CyberLearn Academy">
+  <title>CyberLearn Academy | Master Future Tech Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Preloader -->
+  <div id="loading-screen" role="dialog" aria-modal="true" aria-labelledby="loading-title">
+    <div class="loader-container">
+      <div class="loader-ring"></div>
+      <div class="loader-logo" id="loading-title">Nexreaper Academy</div>
+      <div class="loader-bar-bg">
+        <div class="loader-bar-fill" id="loader-progress-bar"></div>
+      </div>
+      <div class="loader-progress" id="loader-text">0%</div>
+    </div>
+  </div>
+
+  <!-- 2. Background Ambient Lighting -->
+  <div class="ambient-lighting" aria-hidden="true">
+    <div class="glowing-orb orb-1" id="orb-left"></div>
+    <div class="glowing-orb orb-2" id="orb-right"></div>
+    <div class="glowing-orb orb-3" id="orb-center"></div>
+  </div>
+
+  <!-- 3. Floating Glassmorphic Header Navbar -->
+  <header id="main-header">
+    <a href="#" class="logo" id="hud-brand-logo">
+      Nexreaper<span class="logo-dot" aria-hidden="true"></span>
+    </a>
+    
+    <nav aria-label="Main Navigation">
+      <a href="#course-section" id="nav-item-programs">Programs</a>
+      <a href="#testimonials-section" id="nav-item-success">Success Stories</a>
+      <a href="#faq-section" id="nav-item-inquiries">Inquiries</a>
+    </nav>
+
+    <button class="header-cta-btn open-modal-trigger" id="hud-cta-btn">Apply Now</button>
+  </header>
+
+  <!-- 4. Sticky Hero Canvas Section -->
+  <main class="scroll-track" id="scroll-track-element">
+    <div class="sticky-container">
+      
+      <!-- Canvas Backdrop -->
+      <canvas id="animation-canvas"></canvas>
+
+      <!-- Hero Headline Overlay -->
+      <div class="hero-overlay-wrapper" id="hero-headings">
+        <span class="hero-tag">COHORT PATHWAYS OPEN</span>
+        <h1 class="hero-title">Master Future Tech Skills.<br><span>Become Industry Ready.</span></h1>
+        <p class="hero-desc">Learn ethical hacking, web development, and modern UI animation from scratch inside elite virtual developer labs.</p>
+        
+        <div class="hero-cta-group">
+          <button class="cta-btn attention-pulse open-modal-trigger" id="hero-cta-btn">Enroll Now – Limited Seats</button>
+          <span class="hero-urgency-text">Only few seats available this batch</span>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- 5. Content Sections -->
+  <div class="main-content-wrapper">
+
+    <!-- Urgency Countdown Banner -->
+    <div class="countdown-banner reveal-fade" data-reveal="fade-up">
+      <div class="countdown-container">
+        <span class="banner-icon" aria-hidden="true">⏳</span>
+        <span class="banner-text">Special cohort registration ends in:</span>
+        <div class="countdown-timer" id="countdown-timer-widget">
+          <span class="timer-unit" id="timer-hours">00</span>h 
+          <span class="timer-unit" id="timer-minutes">00</span>m 
+          <span class="timer-unit" id="timer-seconds">00</span>s
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section 1: Course Showcase -->
+    <section class="content-section" id="course-section">
+      <div class="section-container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">01 / CURRICULUM PATHS</span>
+          <h2 class="section-title">Explore Our <span>Specialization Paths</span></h2>
+          <p class="section-subtitle">Click on any specialized course card below to view details and secure your enrollment.</p>
+        </div>
+        
+        <div class="course-grid">
+          
+          <!-- Course 1: Hacking -->
+          <div class="course-card glass-card card-teal" id="card-hacking" data-reveal="fade-up" data-reveal-delay="0">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-header">
+              <span class="course-num">SYS.LOG_01 // SEC</span>
+              <div class="course-icon icon-teal" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <h3>Basics of Linux & Ethical Hacking</h3>
+            <p class="card-desc">Learn terminal commands, network socket engineering, penetration testing, and security defensive audits inside containerized environments.</p>
+            <ul class="course-topics">
+              <li>Penetration Testing (Kali Linux)</li>
+              <li>Network Sockets & Encryption</li>
+              <li>Kernel Systems & Defensive Auditing</li>
+            </ul>
+            <div class="course-meta-tags">
+              <span class="meta-tag">1-2 WEEKS</span>
+              <span class="meta-tag">URDU CLASSES</span>
+              <span class="meta-tag">BEG TO ADV</span>
+            </div>
+          </div>
+          
+          <!-- Course 2: Web Dev -->
+          <div class="course-card glass-card card-cobalt" id="card-webdev" data-reveal="fade-up" data-reveal-delay="120">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-header">
+              <span class="course-num">SYS.LOG_02 // DEV</span>
+              <div class="course-icon icon-cobalt" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+            </div>
+            <h3>HTML, CSS & JavaScript Website Development[UsingAI]</h3>
+            <p class="card-desc">Architect, build, and deploy production-grade responsive websites. Work with state mechanics, microservices, and databases.</p>
+            <ul class="course-topics">
+              <li>Modern Responsive CSS (Grid/Flex)</li>
+              <li>JavaScript ES6+ DOM Architecture</li>
+              <li>Database Design & SQL Systems</li>
+            </ul>
+            <div class="course-meta-tags">
+              <span class="meta-tag">1-2 WEEKS</span>
+              <span class="meta-tag">URDU CLASSES</span>
+              <span class="meta-tag">BEG TO ADV</span>
+            </div>
+          </div>
+          
+          <!-- Course 3: Creative Motion -->
+          <div class="course-card glass-card card-indigo" id="card-creative" data-reveal="fade-up" data-reveal-delay="240">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-header">
+              <span class="course-num">SYS.LOG_03 // UI</span>
+              <div class="course-icon icon-indigo" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+              </div>
+            </div>
+            <h3>Animated Modern Website Design (UI + Motion)[Using Ai]</h3>
+            <p class="card-desc">Design advanced, high-performance user interfaces. Master 3D rendering with WebGL/Three.js, physics dampening, and GPU compositing.</p>
+            <ul class="course-topics">
+              <li>Three.js & WebGL Custom Shaders</li>
+              <li>Physics-based Scroll Mechanics</li>
+              <li>Motion Fluid Dynamics & GPU Layers</li>
+            </ul>
+            <div class="course-meta-tags">
+              <span class="meta-tag">1-2 WEEKS</span>
+              <span class="meta-tag">URDU CLASSES</span>
+              <span class="meta-tag">INTERMEDIATE</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Testimonials -->
+    <section class="content-section" id="testimonials-section">
+      <div class="section-container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">02 / GRADUATE DECK</span>
+          <h2 class="section-title">Verified Student <span>Testimonials</span></h2>
+          <p class="section-subtitle">Real success stories from graduates who accelerated their development and security paths.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card glass-card" data-reveal="fade-up" data-reveal-delay="0">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-quote">I learned web dev in 2 weeks! The structured exercises and daily mentor reviews completely bypassed standard code tutorial hell.</p>
+            <div class="testimonial-user">
+              <div class="user-avatar avatar-cobalt">JD</div>
+              <div class="user-info">
+                <h4>Sana Sultana</h4>
+                <span>Frontend Dev</span>
+                <span class="company-badge">Currently Selry 80TPM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" data-reveal="fade-up" data-reveal-delay="120">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-quote">Best hacking intro course! The containerized sandbox labs made practicing network penetration secure, highly interactive, and clear.</p>
+            <div class="testimonial-user">
+              <div class="user-avatar avatar-teal">MK</div>
+              <div class="user-info">
+                <h4>Maria Khan</h4>
+                <span>Security Ops Analyst</span>
+                <span class="company-badge">Now at pakistani telecom</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" data-reveal="fade-up" data-reveal-delay="240">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p class="testimonial-quote">The creative scroll rendering modules are absolute gold. I was able to build an interactive portfolio that secured a major contract.</p>
+            <div class="testimonial-user">
+              <div class="user-avatar avatar-indigo">EL</div>
+              <div class="user-info">
+                <h4>Elena Hashmi</h4>
+                <span>Creative Developer</span>
+                <span class="company-badge">Systems Dev at Stripe</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: FAQs -->
+    <section class="content-section" id="faq-section">
+      <div class="section-container">
+        <div class="section-header" data-reveal="fade-up">
+          <span class="section-tag">03 / ACADEMY RULES</span>
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-subtitle">Have questions about admissions, workloads, or technical requirements? We have answers.</p>
+        </div>
+        
+        <div class="faq-accordion-group" data-reveal="fade-up" data-reveal-delay="100">
+          <div class="faq-item glass-card" id="faq-1">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-1" id="faq-trigger-1">
+              <span>Who is this academy designed for?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-trigger-1">
+              <p>Our curriculum is designed for both absolute beginners and intermediate developers. We start with fundamental terminal systems and scale quickly to advanced software engineering, animation physics, and security defense.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card" id="faq-2">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-2" id="faq-trigger-2">
+              <span>Is there a community forum or active mentor support?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-trigger-2">
+              <p>Yes. Every enrolled candidate receives access to our private Slack server, daily interactive code reviews from active industry developers, and collaborative sandbox environments.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card" id="faq-3">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-3" id="faq-trigger-3">
+              <span>What is the weekly workload expectation?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-trigger-3">
+              <p>Programs are highly self-paced, but we recommend committing 15 to 20 hours per week. This ensures you comfortably finish your cohort pathway capstones, lab audits, and projects within the 16-week cycle.</p>
+            </div>
+          </div>
+
+          <div class="faq-item glass-card" id="faq-4">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-answer-4" id="faq-trigger-4">
+              <span>How do I contact the academy directly?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-trigger-4">
+              <p>Reach us directly on WhatsApp at <strong>0300-5381443</strong>. Our admissions team typically responds within a few hours during business days. You can also use the enrollment form to send us a message.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Contact Strip -->
+    <div class="whatsapp-strip" data-reveal="fade-up">
+      <div class="whatsapp-strip-inner">
+        <div class="whatsapp-strip-text">
+          <span class="whatsapp-strip-label">Direct WhatsApp Line</span>
+          <span class="whatsapp-strip-number">0300-5381443</span>
+        </div>
+        <a href="https://wa.me/923005381443" target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="brand-title">Nexreaper Academy</span>
+          <p>Architecting next-generation digital engineering, animation, and security operations professionals.</p>
+          <a href="https://wa.me/923005381443" target="_blank" rel="noopener noreferrer" class="footer-whatsapp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            0300-5381443
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="#course-section">Programs</a>
+          <a href="#testimonials-section">Success Stories</a>
+          <a href="#faq-section">Inquiries</a>
+          <a href="#" class="open-modal-trigger">Apply Now</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 CyberLearn Academy. All rights reserved.</p>
+      </div>
+    </footer>
+    
+  </div>
+
+  <!-- Sticky Floating CTA Widget -->
+  <div class="sticky-cta-widget" id="floating-sticky-cta">
+    <div class="sticky-cta-content glass-card">
+      <span class="sticky-cta-badge" aria-hidden="true"></span>
+      <span class="sticky-cta-text">Registrations Open</span>
+      <button class="cta-btn sticky-cta-btn open-modal-trigger" id="sticky-action-btn">Enroll Now</button>
+    </div>
+  </div>
+
+  <!-- Modal Backdrop -->
+  <div class="modal-backdrop" id="form-modal-backdrop" aria-hidden="true"></div>
+
+  <!-- Enrollment Modal (WhatsApp number field REMOVED) -->
+  <div class="modal-wrapper" id="form-modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-form-title">
+    <div class="modal-card glass-card">
+      
+      <button class="modal-close-btn" id="close-modal-trigger" aria-label="Close Form Modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="section-tag">PAKISTAN COHORT // URDU MEDIUM</span>
+        <h2 id="modal-form-title">Application Profile</h2>
+        <p>Complete your profile below. All classes conducted fully in Urdu (اردو).</p>
+      </div>
+      
+      <form id="whatsapp-enrollment-form" novalidate>
+        
+        <!-- Name Input -->
+        <div class="input-group">
+          <label for="modal-name">👤 Full Name</label>
+          <input type="text" id="modal-name" required placeholder="e.g. Ahmad Bilal Qureshi">
+        </div>
+        
+        <!-- Course Checkboxes (No WhatsApp number field) -->
+        <div class="checkbox-group-wrapper">
+          <span class="checkbox-group-title">🎯 Select Course Pathway(s)</span>
+          
+          <div class="checkbox-row">
+            <label class="custom-checkbox-container">
+              <input type="checkbox" name="course-selection" value="Linux & Ethical Hacking">
+              <span class="checkmark chk-teal"></span>
+              <span class="check-label">Linux & Ethical Hacking</span>
+            </label>
+          </div>
+
+          <div class="checkbox-row">
+            <label class="custom-checkbox-container">
+              <input type="checkbox" name="course-selection" value="Web Development (HTML/CSS/JS)">
+              <span class="checkmark chk-cobalt"></span>
+              <span class="check-label">Web Development (HTML/CSS/JS){using ai}</span>
+            </label>
+          </div>
+
+          <div class="checkbox-row">
+            <label class="custom-checkbox-container">
+              <input type="checkbox" name="course-selection" value="Animated Website Design">
+              <span class="checkmark chk-indigo"></span>
+              <span class="check-label">Animated Website Design</span>
+            </label>
+          </div>
+
+          <div class="checkbox-row border-bundle">
+            <label class="custom-checkbox-container">
+              <input type="checkbox" id="chk-bundle" name="course-selection" value="All Courses Bundle">
+              <span class="checkmark chk-bundle"></span>
+              <span class="check-label font-bold">⭐ All Courses Bundle (Save 15%)</span>
+            </label>
+          </div>
+        </div>
+        
+        <!-- Optional Message -->
+        <div class="input-group">
+          <label for="modal-message">📝 Optional Message</label>
+          <textarea id="modal-message" placeholder="Describe your coding or hacking background (optional)..." rows="2"></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn form-submit-btn attention-pulse" id="whatsapp-submit-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Submit & Continue on WhatsApp
+        </button>
+        
+        <p class="modal-secure-badge">🔒 Secure Encrypted Admission Profile — WhatsApp Redirect to 0300-5381443</p>
+        
+      </form>
+      
+    </div>
+  </div>
+
+  <!-- GSAP & App Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
